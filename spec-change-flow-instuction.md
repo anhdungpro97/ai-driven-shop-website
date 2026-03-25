@@ -1,0 +1,2 @@
+- spec.md change => Other files in specs folder related will be updated
+- Do not remove my old files such as plan.md,etc and replace files by default template => Just update new thing into old files

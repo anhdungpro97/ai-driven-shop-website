@@ -31,7 +31,15 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Quality Gate: Define linting, static analysis, code review, and defect-risk controls.
+- UX Gate: Define key user journeys, acceptance validation method, and accessibility
+  considerations for impacted interfaces.
+- Performance Gate: Define measurable performance budgets and verification approach
+  (tests, benchmarks, or production-like profiling).
+- Verification Gate: Confirm each user story is independently testable and map tests to
+  requirements and edge cases.
+- Operational Gate: Define logging/telemetry expectations and rollback/mitigation plan
+  for high-risk changes.
 
 ## Project Structure
 
