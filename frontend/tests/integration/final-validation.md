@@ -17,4 +17,7 @@
   - Header actions (Login/Register) are visible and keyboard focusable
   - Hero section displays image and fallback logic
   - Category controls (Coffee/Juice/Foods) and sections are visible and navigable
+  - Coffee control opens and closes options panel from category navigation
+  - Coffee options rows display aligned name and price values
+  - Coffee panel is keyboard operable (trigger focus + Escape close)
   - Footer information remains readable at mobile and desktop sizes

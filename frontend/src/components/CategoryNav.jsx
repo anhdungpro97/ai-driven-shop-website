@@ -1,12 +1,25 @@
 import PropTypes from 'prop-types'
 
-function CategoryNav({ categories }) {
+function CategoryNav({ categories, coffeePanelId, coffeePanelOpen, onCoffeeToggle }) {
   return (
     <nav className="category-nav" aria-label="Menu categories">
       {categories.map((category) => (
-        <a key={category.name} className="category-chip" href={category.destination}>
-          {category.name}
-        </a>
+        category.name === 'Coffee' ? (
+          <button
+            key={category.name}
+            type="button"
+            className={`category-chip ${coffeePanelOpen ? 'category-chip--active' : ''}`}
+            aria-expanded={coffeePanelOpen}
+            aria-controls={coffeePanelId}
+            onClick={onCoffeeToggle}
+          >
+            {category.name}
+          </button>
+        ) : (
+          <a key={category.name} className="category-chip" href={category.destination}>
+            {category.name}
+          </a>
+        )
       ))}
     </nav>
   )
@@ -20,6 +33,9 @@ CategoryNav.propTypes = {
       order: PropTypes.number.isRequired,
     })
   ).isRequired,
+  coffeePanelId: PropTypes.string.isRequired,
+  coffeePanelOpen: PropTypes.bool.isRequired,
+  onCoffeeToggle: PropTypes.func.isRequired,
 }
 
 export default CategoryNav

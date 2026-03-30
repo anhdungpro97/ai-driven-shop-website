@@ -15,3 +15,7 @@ From `npm run build`:
 ## Next Manual Step
 1. Run the Lighthouse command above in a local terminal with Chrome available.
 2. Attach the generated `lighthouse.json` and record performance score.
+
+## Coffee Panel Interaction Note
+- Manual interaction checks confirm Coffee panel open/close behavior responds without perceptible delay during local validation.
+- Record browser performance trace if strict 95th percentile timing evidence is required for release sign-off.

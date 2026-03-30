@@ -18,6 +18,13 @@ export const categoryLinks = [
   { name: 'Foods', destination: '#foods', order: 3 },
 ]
 
+export const coffeeOptions = [
+  { id: 'espresso', name: 'Espresso', priceDisplay: '$3.00', order: 1, available: true },
+  { id: 'americano', name: 'Americano', priceDisplay: '$3.50', order: 2, available: true },
+  { id: 'latte', name: 'Cafe Latte', priceDisplay: '$4.75', order: 3, available: true },
+  { id: 'cappuccino', name: 'Cappuccino', priceDisplay: '$4.50', order: 4, available: true },
+]
+
 export const landingPageContent = {
   id: 'coffee-landing-main',
   backgroundImagePath: '/background_image.png',
@@ -27,6 +34,13 @@ export const landingPageContent = {
   heroImagePath: heroCoffeeShopImage,
   heroImageAlt: 'Warm coffee shop interior with brewed coffee and pastries',
   categories: categoryLinks,
+  coffeeOptionsPanel: {
+    panelId: 'coffee-options-panel',
+    title: 'Available Coffee Options',
+    emptyMessage: 'No coffee options are available right now.',
+    fallbackPriceLabel: 'Price unavailable',
+    options: coffeeOptions,
+  },
   footerInfo: {
     shopName: 'Morning Roast Coffee House',
     addressLine: '123 Bean Street, Brewtown, CA 90210',
