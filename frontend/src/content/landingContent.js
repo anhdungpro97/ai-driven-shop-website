@@ -77,6 +77,27 @@ export const landingPageContent = {
     fallbackPriceLabel: 'Price unavailable',
     options: coffeeOptions,
   },
+  registerScreen: {
+    kicker: 'Create Your Account',
+    title: 'Register',
+    subtitle: 'Fill in your details to continue with Morning Roast.',
+    primaryActionLabel: 'Register',
+    labels: {
+      fullName: 'Full Name',
+      email: 'Email',
+      password: 'Password',
+      confirmPassword: 'Confirm Password',
+      showPassword: 'Show',
+      hidePassword: 'Hide',
+    },
+    validationMessages: {
+      fullNameRequired: 'Full name is required.',
+      emailInvalid: 'Please enter a valid email address.',
+      passwordWeak: 'Password must be at least 8 characters.',
+      confirmRequired: 'Please confirm your password.',
+      confirmMismatch: 'Passwords do not match.',
+    },
+  },
   footerInfo: {
     shopName: 'Morning Roast Coffee House',
     addressLine: '123 Bean Street, Brewtown, CA 90210',

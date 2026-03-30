@@ -9,9 +9,9 @@
 From `npm run build`:
 - dist/index.html: 0.46 kB (gzip 0.29 kB)
 - dist/assets/hero-coffee-shop-CayK30zZ.jpg: 42.34 kB
-- dist/assets/index-B6Sdar-k.css: 6.23 kB (gzip 1.99 kB)
-- dist/assets/index-Din5dPSU.js: 151.23 kB (gzip 48.73 kB)
-- Build completed successfully in ~2.52s
+- dist/assets/index-DvnqsB69.css: 8.44 kB (gzip 2.45 kB)
+- dist/assets/index-D9z96Vze.js: 156.69 kB (gzip 50.02 kB)
+- Build completed successfully in ~3.03s
 
 ## Next Manual Step
 1. Run the Lighthouse command above in a local terminal with Chrome available.
@@ -19,4 +19,7 @@ From `npm run build`:
 
 ## Coffee View Interaction Note
 - Manual interaction checks confirm Coffee full-screen view open/close behavior responds without perceptible delay during local validation.
+
+## Register View Interaction Note
+- Manual interaction checks confirm Register-trigger screen transition and inline validation feedback respond without perceptible delay during local validation.
 - Record browser performance trace if strict 95th percentile timing evidence is required for release sign-off.

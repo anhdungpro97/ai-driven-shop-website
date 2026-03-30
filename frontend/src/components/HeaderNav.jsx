@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function HeaderNav({ actions, links }) {
+function HeaderNav({ actions, links, onRegisterActivate }) {
   return (
     <header className="header-nav" role="banner">
       <div className="header-nav__brand">
@@ -19,9 +19,15 @@ function HeaderNav({ actions, links }) {
         {actions
           .filter((action) => action.visible)
           .map((action) => (
-            <a key={action.label} className="nav-btn" href={action.destination}>
-              {action.label}
-            </a>
+            action.label === 'Register' ? (
+              <button key={action.label} className="nav-btn" type="button" onClick={onRegisterActivate}>
+                {action.label}
+              </button>
+            ) : (
+              <a key={action.label} className="nav-btn" href={action.destination}>
+                {action.label}
+              </a>
+            )
           ))}
         <button className="menu-btn" type="button" aria-label="Open menu">
           <span />
@@ -47,6 +53,7 @@ HeaderNav.propTypes = {
       visible: PropTypes.bool.isRequired,
     })
   ).isRequired,
+  onRegisterActivate: PropTypes.func.isRequired,
 }
 
 export default HeaderNav
