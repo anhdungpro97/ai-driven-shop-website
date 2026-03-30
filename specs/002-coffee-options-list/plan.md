@@ -5,7 +5,7 @@
 
 ## Summary
 
-Add a Coffee options panel to the existing landing page so activating the Coffee control shows a clear list of coffee items with name and price, supports open/close interaction, and keeps readability plus visual consistency across desktop and mobile.
+Enhance the landing page so activating the Coffee control opens a full-screen body view listing available coffee options, where each item shows name, image, price, and order button while maintaining clear readability and visual alignment across desktop and mobile.
 
 ## Technical Context
 
@@ -15,9 +15,9 @@ Add a Coffee options panel to the existing landing page so activating the Coffee
 **Testing**: npm run lint, npm run build, and manual integration validation notes  
 **Target Platform**: Modern desktop and mobile web browsers  
 **Project Type**: Website frontend only  
-**Performance Goals**: Coffee panel open/close visual response <= 1 second for 95% of interactions; no perceptible layout jank during toggle  
-**Constraints**: No backend/database changes; maintain current design language; preserve keyboard accessibility and contrast over background image  
-**Scale/Scope**: Single landing page enhancement affecting Coffee control behavior and display content only
+**Performance Goals**: Full-screen Coffee view open/close response <= 1 second for 95% of interactions; no perceptible layout instability during transitions  
+**Constraints**: No backend/database changes; preserve existing design language; keep keyboard accessibility and readable contrast for text and controls  
+**Scale/Scope**: Single landing page enhancement introducing a full-screen coffee options view and option row details
 
 ## Constitution Check
 
@@ -25,19 +25,19 @@ Add a Coffee options panel to the existing landing page so activating the Coffee
 
 ### Pre-Research Check
 
-- Quality Gate: PASS. Existing lint/build validation and componentized frontend structure can absorb incremental UI behavior changes.
-- UX Gate: PASS. Primary journeys, readability requirements, and accessibility expectations are explicit in spec.
-- Performance Gate: PASS. Interaction-time budget for panel open/close is defined and measurable.
-- Verification Gate: PASS. Each user story has independent acceptance and manual validation criteria.
-- Operational Gate: PASS. Empty-state and fallback-price handling define safe degraded behavior without backend dependencies.
+- Quality Gate: PASS. Existing frontend component architecture supports incremental feature additions with lint/build checks.
+- UX Gate: PASS. Primary user journeys and readability expectations are explicit for full-screen behavior.
+- Performance Gate: PASS. Interaction-time target is measurable and included in requirements.
+- Verification Gate: PASS. Each story includes independent test criteria and acceptance scenarios.
+- Operational Gate: PASS. Empty-state and fallback-price handling define resilient behavior without backend dependencies.
 
 ### Post-Design Check
 
-- Quality Gate: PASS. Design artifacts map to existing component/content/style files and avoid architectural churn.
-- UX Gate: PASS. Contract and data model preserve readable layout, keyboard use, and design consistency goals.
-- Performance Gate: PASS. Quickstart includes explicit checks for interaction responsiveness and no layout instability.
-- Verification Gate: PASS. Story-level verification remains independent and traceable to requirements.
-- Operational Gate: PASS. Degraded states (empty options, fallback price) are explicitly modeled and testable.
+- Quality Gate: PASS. Artifacts map cleanly to existing frontend components/content/styles with minimal architecture risk.
+- UX Gate: PASS. Data model and contract include full-screen display, row alignment, keyboard use, and readability.
+- Performance Gate: PASS. Quickstart includes explicit checks for interaction responsiveness and no clipping/overlap.
+- Verification Gate: PASS. Story-level validations remain independently executable.
+- Operational Gate: PASS. Degraded states remain explicit and testable (empty list, invalid price fallback).
 
 ## Project Structure
 
@@ -68,7 +68,7 @@ frontend/
     └── integration/
 ```
 
-**Structure Decision**: Keep implementation in existing `frontend` application and add only incremental component/content/style updates required by the feature.
+**Structure Decision**: Keep implementation inside existing `frontend` app and add focused updates for full-screen coffee options interactions and content rendering.
 
 ## Phase Outputs
 

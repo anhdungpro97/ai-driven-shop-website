@@ -10,3 +10,8 @@ This folder stores manual validation records for each user story and final check
 - us6-coffee-options-readability.md
 - lighthouse-report.md
 - final-validation.md
+
+Feature 002 notes:
+- us4 validates full-screen open/close behavior and Escape handling.
+- us5 validates name/image/price/order button visibility and alignment.
+- us6 validates responsive readability and keyboard accessibility.

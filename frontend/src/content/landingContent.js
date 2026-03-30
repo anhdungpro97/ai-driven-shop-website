@@ -19,10 +19,46 @@ export const categoryLinks = [
 ]
 
 export const coffeeOptions = [
-  { id: 'espresso', name: 'Espresso', priceDisplay: '$3.00', order: 1, available: true },
-  { id: 'americano', name: 'Americano', priceDisplay: '$3.50', order: 2, available: true },
-  { id: 'latte', name: 'Cafe Latte', priceDisplay: '$4.75', order: 3, available: true },
-  { id: 'cappuccino', name: 'Cappuccino', priceDisplay: '$4.50', order: 4, available: true },
+  {
+    id: 'espresso',
+    name: 'Espresso',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Espresso coffee served in a small ceramic cup',
+    priceDisplay: '$3.00',
+    orderButtonLabel: 'Order Espresso',
+    order: 1,
+    available: true,
+  },
+  {
+    id: 'americano',
+    name: 'Americano',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Americano coffee in a clear glass mug',
+    priceDisplay: '$3.50',
+    orderButtonLabel: 'Order Americano',
+    order: 2,
+    available: true,
+  },
+  {
+    id: 'latte',
+    name: 'Cafe Latte',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Cafe latte with milk foam art in a wide cup',
+    priceDisplay: '$4.75',
+    orderButtonLabel: 'Order Cafe Latte',
+    order: 3,
+    available: true,
+  },
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Cappuccino topped with frothy milk',
+    priceDisplay: '$4.50',
+    orderButtonLabel: 'Order Cappuccino',
+    order: 4,
+    available: true,
+  },
 ]
 
 export const landingPageContent = {

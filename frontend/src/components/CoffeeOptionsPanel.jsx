@@ -11,6 +11,10 @@ function CoffeeOptionsPanel({
   isOpen,
   onRequestClose,
 }) {
+  const visibleOptions = options
+    .filter((option) => option.available)
+    .sort((left, right) => left.order - right.order)
+
   useEffect(() => {
     if (!isOpen) {
       return undefined
@@ -32,33 +36,40 @@ function CoffeeOptionsPanel({
 
   return (
     <section id={panelId} className="coffee-panel" aria-label="Coffee options" role="region">
-      <div className="coffee-panel__header">
-        <h3>{title}</h3>
-        <button
-          type="button"
-          className="coffee-panel__close"
-          aria-label="Close coffee options"
-          onClick={onRequestClose}
-        >
-          Close
-        </button>
-      </div>
+      <div className="coffee-panel__content">
+        <div className="coffee-panel__header">
+          <h3>{title}</h3>
+          <button
+            type="button"
+            className="coffee-panel__close"
+            aria-label="Close coffee options"
+            onClick={onRequestClose}
+          >
+            Close
+          </button>
+        </div>
 
-      {options.length === 0 ? (
-        <p className="coffee-panel__empty">{emptyMessage}</p>
-      ) : (
-        <ul className="coffee-panel__list">
-          {options
-            .filter((option) => option.available)
-            .sort((left, right) => left.order - right.order)
-            .map((option) => (
+        {visibleOptions.length === 0 ? (
+          <p className="coffee-panel__empty">{emptyMessage}</p>
+        ) : (
+          <ul className="coffee-panel__list">
+            {visibleOptions.map((option) => (
               <li key={option.id} className="coffee-panel__row">
-                <span>{option.name}</span>
-                <strong>{resolveCoffeePrice(option.priceDisplay, fallbackPriceLabel)}</strong>
+                <img src={option.imagePath} alt={option.imageAlt} className="coffee-panel__image" />
+                <div className="coffee-panel__meta">
+                  <span className="coffee-panel__name">{option.name}</span>
+                  <strong className="coffee-panel__price">
+                    {resolveCoffeePrice(option.priceDisplay, fallbackPriceLabel)}
+                  </strong>
+                </div>
+                <button type="button" className="coffee-panel__order-btn">
+                  {option.orderButtonLabel}
+                </button>
               </li>
             ))}
-        </ul>
-      )}
+          </ul>
+        )}
+      </div>
     </section>
   )
 }
@@ -70,7 +81,10 @@ CoffeeOptionsPanel.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
+      imagePath: PropTypes.string.isRequired,
+      imageAlt: PropTypes.string.isRequired,
       priceDisplay: PropTypes.string,
+      orderButtonLabel: PropTypes.string.isRequired,
       order: PropTypes.number.isRequired,
       available: PropTypes.bool.isRequired,
     })

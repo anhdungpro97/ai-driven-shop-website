@@ -32,7 +32,7 @@ JavaScript (ES2022), HTML5, CSS3: Follow standard conventions
 
 ## Recent Changes
 - 002-coffee-options-list: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react
-- task_1_customize_1: Added [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION] + [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]
+- 002-coffee-options-list: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react
 - task_1_customize_1: Added [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION] + [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]
 
 
