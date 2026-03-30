@@ -22,7 +22,7 @@
   - CSS-only decorative hero: does not satisfy requirement to display a general image.
 
 ## Decision 4: Navigation behavior
-- Decision: Place Login/Logout in top navigation and present category links as explicit actions for Coffee, Drinks, Foods.
+- Decision: Place Login/Register in top navigation and present category links as explicit actions for Coffee, Juice, Foods.
 - Rationale: Meets visibility requirements and improves discoverability across desktop/mobile.
 - Alternatives considered:
   - Hide account actions in menu drawer by default: weaker visibility requirement compliance.

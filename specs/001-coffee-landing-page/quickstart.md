@@ -36,9 +36,9 @@
 ## Implementation Checklist
 1. Landing page uses /public/background_image.png as the large coffee shop background image with readable text overlay.
 2. Header/top nav contains visible Home, Service, About Us, and Contact links.
-3. Header/top nav contains visible Login and Logout actions.
+3. Header/top nav contains visible Login and Register actions.
 4. Hero section displays a general coffee shop image and fallback behavior.
-5. Category controls show Coffee, Drinks, and Foods.
+5. Category controls show Coffee, Juice, and Foods.
 6. Footer shows shop name, address, and contact details.
 7. Layout works for desktop and mobile viewports.
 

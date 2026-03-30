@@ -8,9 +8,9 @@
 ## Fallback Build Performance Evidence
 From `npm run build`:
 - dist/index.html: 0.46 kB (gzip 0.29 kB)
-- dist/assets/index-CfAvaeOc.css: 3.17 kB (gzip 1.13 kB)
-- dist/assets/index-DVXydLVw.js: 147.74 kB (gzip 47.81 kB)
-- Build completed successfully in ~2.20s
+- dist/assets/index-CdcaN5UY.css: 4.09 kB (gzip 1.51 kB)
+- dist/assets/index-CnhHgWUP.js: 147.87 kB (gzip 47.77 kB)
+- Build completed successfully in ~2.17s
 
 ## Next Manual Step
 1. Run the Lighthouse command above in a local terminal with Chrome available.

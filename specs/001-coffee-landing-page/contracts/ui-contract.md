@@ -9,7 +9,7 @@ Frontend-only contract for required page sections, controls, and navigational be
   1. Page background layer (large coffee shop image)
   2. Header/Top Navigation
   3. Hero Section (with coffee shop image)
-  4. Category Navigation (Coffee, Drinks, Foods)
+  4. Category Navigation (Coffee, Juice, Foods)
   5. Footer with shop information
 
 ## Background Contract
@@ -25,7 +25,7 @@ Frontend-only contract for required page sections, controls, and navigational be
 - Required controls:
   - Top links: Home, Service, About Us, Contact (visible)
   - Login button/link (visible)
-  - Logout button/link (visible)
+  - Register button/link (visible)
 - Accessibility:
   - Top links must be keyboard reachable in tab order.
   - Controls must be keyboard reachable in tab order.
@@ -43,7 +43,7 @@ Frontend-only contract for required page sections, controls, and navigational be
 ## Category Navigation Contract
 - Required categories:
   - Coffee
-  - Drinks
+  - Juice
   - Foods
 - Behavior:
   - Each category control must be selectable and navigate to a corresponding destination.
