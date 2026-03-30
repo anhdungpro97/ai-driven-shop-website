@@ -1,11 +1,11 @@
 # Implementation Plan: Coffee Shop Landing Page
 
-**Branch**: 001-coffee-landing-page | **Date**: 2026-03-25 | **Spec**: specs/001-coffee-landing-page/spec.md
+**Branch**: 001-coffee-landing-page | **Date**: 2026-03-30 | **Spec**: specs/001-coffee-landing-page/spec.md
 **Input**: Feature specification from specs/001-coffee-landing-page/spec.md
 
 ## Summary
 
-Implement a frontend-only landing page for the coffee shop using ReactJS with HTML, CSS, and JavaScript. The page must include a hero image, visible Login and Logout actions, top links (Home, Service, About Us, Contact), category links (Coffee, Drinks, Foods), and footer information, with a large readable background image explicitly sourced from /public/background_image.png plus fallback behavior.
+Implement a frontend-only landing page for the coffee shop using ReactJS with HTML, CSS, and JavaScript. The page must include a hero image, visible Login and Register actions, top links (Home, Service, About Us, Contact), category links (Coffee, Juice, Foods), and footer information, with a large readable background image explicitly sourced from /public/background_image.png plus fallback behavior.
 
 ## Technical Context
 

@@ -4,7 +4,7 @@ function HeaderNav({ actions, links }) {
   return (
     <header className="header-nav" role="banner">
       <div className="header-nav__brand">
-        <p className="brand-kicker">Hanover and Tyke</p>
+        <p className="brand-kicker"></p>
       </div>
 
       <nav aria-label="Primary links" className="header-nav__links">

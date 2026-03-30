@@ -15,7 +15,7 @@
   - footerInfo (ShopInfo, required)
 - Validation rules:
   - topNavLinks must include labels Home, Service, About Us, Contact exactly once each.
-  - categories must include names Coffee, Drinks, Foods exactly once each.
+  - categories must include names Coffee, Juice, Foods exactly once each.
   - backgroundImagePath must equal /public/background_image.png and resolve at runtime.
   - backgroundFallbackStyle must keep text readable when background image is unavailable.
   - heroImagePath must resolve to an existing frontend asset at build time.
@@ -23,11 +23,11 @@
 ## Entity: NavigationAction
 - Purpose: Represents account-related header actions.
 - Fields:
-  - label (enum, required): Login | Logout
+  - label (enum, required): Login | Register
   - destination (string, required): route or URL target.
   - visible (boolean, required): must be true on initial render.
 - Validation rules:
-  - both Login and Logout actions must be present.
+  - both Login and Register actions must be present.
   - visible must be true for both actions on desktop/mobile layouts.
 
 ## Entity: TopNavLink
@@ -42,7 +42,7 @@
 ## Entity: CategoryLink
 - Purpose: Represents menu category entry points.
 - Fields:
-  - name (enum, required): Coffee | Drinks | Foods
+  - name (enum, required): Coffee | Juice | Foods
   - destination (string, required)
   - order (integer, required, min 1)
 - Validation rules:

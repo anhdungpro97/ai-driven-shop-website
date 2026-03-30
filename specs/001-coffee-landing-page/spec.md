@@ -3,7 +3,7 @@
 **Feature Branch**: `001-coffee-landing-page`  
 **Created**: 2026-03-23  
 **Status**: Draft  
-**Input**: User description: "Create the main landing page for the coffee shop website. Requirements: display a hero section with a general coffee shop image; include visible Login and Logout buttons; include category links for Coffee, Drinks, and Foods; include a footer with shop key information; use a large coffee shop background image for the page."
+**Input**: User description: "Create the main landing page for the coffee shop website. Requirements: display a hero section with a general coffee shop image; include visible Login and Register buttons; include category links for Coffee, Juice, and Foods; include a footer with shop key information; use a large coffee shop background image for the page."
 
 ## User Scenarios
 
@@ -20,14 +20,14 @@ As a website visitor, I want to open the coffee shop landing page and immediatel
 ---
 
 ### User Story 2 - See Account Action Buttons (Priority: P2)
-As a visitor, I want to see Login and Logout buttons on the page so that account-related actions are easy to find.
+As a visitor, I want to see Login and Register buttons on the page so that account-related actions are easy to find.
 
 **Why this priority**: These actions are important for navigation and layout, but secondary to the main landing content.
 
 **Acceptance Scenarios**:
 
-1. **Given** a visitor views the top section of the page, **When** the header or navigation is displayed, **Then** Login and Logout buttons are visible and clearly labeled.
-2. **Given** the page is viewed on a smaller screen, **When** the layout adjusts, **Then** the Login and Logout buttons remain visible and usable.
+1. **Given** a visitor views the top section of the page, **When** the header or navigation is displayed, **Then** Login and Register buttons are visible and clearly labeled.
+2. **Given** the page is viewed on a smaller screen, **When** the layout adjusts, **Then** the Login and Register buttons remain visible and usable.
 
 ---
 
@@ -44,13 +44,13 @@ As a visitor, I want to see clear top navigation links (Home, Service, About Us,
 ---
 
 ### User Story 3 - Access Menu Categories (Priority: P3)
-As a visitor, I want to see category links for Coffee, Drinks, and Foods so that I can quickly move to the section I am interested in.
+As a visitor, I want to see category links for Coffee, Juice, and Foods so that I can quickly move to the section I am interested in.
 
 **Why this priority**: Category navigation improves usability, but the page can still function without it as an initial MVP.
 
 **Acceptance Scenarios**:
 
-1. **Given** a visitor views the category navigation area, **When** the page is displayed, **Then** Coffee, Drinks, and Foods links are visible.
+1. **Given** a visitor views the category navigation area, **When** the page is displayed, **Then** Coffee, Juice, and Foods links are visible.
 2. **Given** a visitor selects one of the category links, **When** the action occurs, **Then** the user is taken to the corresponding category destination or section.
 
 ## Edge Cases
@@ -68,8 +68,8 @@ As a visitor, I want to see category links for Coffee, Drinks, and Foods so that
 
 - **FR-001**: The system MUST provide a main landing page for the coffee shop website.
 - **FR-002**: The system MUST display a hero section with a general coffee shop image.
-- **FR-003**: The system MUST display visible Login and Logout buttons in the header or top section.
-- **FR-004**: The system MUST provide category links or buttons for Coffee, Drinks, and Foods.
+- **FR-003**: The system MUST display visible Login and Register buttons in the header or top section.
+- **FR-004**: The system MUST provide category links or buttons for Coffee, Juice, and Foods.
 - **FR-005**: The system MUST include a footer with shop name, address, and contact details.
 - **FR-006**: The system MUST remain readable and usable on desktop and mobile screen sizes.
 - **FR-007**: The system MUST provide a fallback display if the hero image cannot be loaded.
@@ -81,7 +81,7 @@ As a visitor, I want to see category links for Coffee, Drinks, and Foods so that
 ## Assumptions
 
 - This feature is frontend only.
-- Login and Logout buttons are UI elements only; authentication logic is outside the scope.
+- Login and Register buttons are UI elements only; authentication logic is outside the scope.
 - Category links may point to placeholder pages or sections if full category pages are not yet implemented.
 - Shop information is provided as static content for this phase.
 
@@ -92,17 +92,17 @@ As a visitor, I want to see category links for Coffee, Drinks, and Foods so that
 
 ## Scope Boundaries
 
-- In scope: landing page layout, large coffee shop background image, hero section, Login and Logout buttons, category navigation, and footer content.
-- In scope: landing page layout, large coffee shop background image, hero section, top navigation links, Login and Logout buttons, category navigation, and footer content.
+- In scope: landing page layout, large coffee shop background image, hero section, Login and Register buttons, category navigation, and footer content.
+- In scope: landing page layout, large coffee shop background image, hero section, top navigation links, Login and Register buttons, category navigation, and footer content.
 - Out of scope: backend development, database integration, authentication logic, product listing pages, and checkout flow.
 
 ## Success Criteria
 
 ### Expected Outcomes
 
-- **SC-001**: The landing page shows the hero section, Login button, Logout button, category links, and footer content on initial load.
+- **SC-001**: The landing page shows the hero section, Login button, Register button, category links, and footer content on initial load.
 - **SC-002**: The page layout remains readable and non-overlapping on desktop and mobile screens.
-- **SC-003**: Coffee, Drinks, and Foods category controls are visible and usable.
+- **SC-003**: Coffee, Juice, and Foods category controls are visible and usable.
 - **SC-004**: The footer displays shop name, address, and contact details clearly.
 - **SC-005**: The page provides a clean and understandable main entry experience for visitors.
 - **SC-006**: A large coffee shop background image is visible on desktop and mobile without reducing content readability.

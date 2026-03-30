@@ -2,7 +2,7 @@ import heroCoffeeShopImage from '../assets/hero-coffee-shop.jpg'
 
 export const navigationActions = [
   { label: 'Login', destination: '/login', visible: true },
-  { label: 'Logout', destination: '/logout', visible: true },
+  { label: 'Register', destination: '/register', visible: true },
 ]
 
 export const topNavLinks = [
@@ -14,7 +14,7 @@ export const topNavLinks = [
 
 export const categoryLinks = [
   { name: 'Coffee', destination: '#coffee', order: 1 },
-  { name: 'Drinks', destination: '#drinks', order: 2 },
+  { name: 'Juice', destination: '#juice', order: 2 },
   { name: 'Foods', destination: '#foods', order: 3 },
 ]
 
