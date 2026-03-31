@@ -1,6 +1,6 @@
 ﻿# demo_shop_speckit Development Guidelines
 
-Auto-generated from all feature plans. Last updated: 2026-03-30
+Auto-generated from all feature plans. Last updated: 2026-03-31
 
 ## Active Technologies
 - N/A (no backend, no database) (001-coffee-landing-page)
@@ -12,6 +12,8 @@ Auto-generated from all feature plans. Last updated: 2026-03-30
 - [if applicable, e.g., PostgreSQL, CoreData, files or N/A] (task_1_customize_1)
 - JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react (002-coffee-options-list)
 - N/A (frontend-only interaction state) (003-register-screen)
+- Python 3.12 + `boto3` (DynamoDB), `bcrypt` (password hashing) (004-backend-user-registration)
+- DynamoDB — single `Users` table, PK `email`, no secondary indexes required for this feature (004-backend-user-registration)
 
 - JavaScript (ES2022), HTML5, CSS3 + ReactJS 18, React DOM 18, Vite (001-coffee-landing-page)
 
@@ -32,8 +34,8 @@ npm test; npm run lint
 JavaScript (ES2022), HTML5, CSS3: Follow standard conventions
 
 ## Recent Changes
+- 004-backend-user-registration: Added Python 3.12 + `boto3` (DynamoDB), `bcrypt` (password hashing)
 - 003-register-screen: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite
-- 002-coffee-options-list: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react
 - 002-coffee-options-list: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react
 
 
