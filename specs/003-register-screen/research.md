@@ -38,3 +38,10 @@
 - Rationale: Consistent with existing repo verification model and constitution gates for UX/performance checks.
 - Alternatives considered:
   - Introduce new e2e tooling immediately: disproportionate overhead for incremental UI change.
+
+## Decision 7: Registration close behavior
+- Decision: Provide a clear close control on the registration screen that transitions users back to the initial landing page while clearing registration-screen visibility.
+- Rationale: Aligns with the new user story requiring explicit cancel/exit navigation and prevents users from getting stuck in the registration flow.
+- Alternatives considered:
+  - Browser-back-only behavior: rejected because it is inconsistent and does not guarantee in-flow close control visibility.
+  - Keep registration screen open and hide form content: rejected because it leaves ambiguous UI state and fails explicit return expectation.

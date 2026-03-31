@@ -41,12 +41,16 @@
   - activeScreen (string, required): landing or registration.
   - transitionInProgress (boolean, required): indicates whether screen transition animation is active.
   - transitionName (string, optional): identifier for transition animation variant.
+  - closeActionAvailable (boolean, required): indicates whether a close control is available while registration screen is active.
 - Validation rules:
   - activeScreen transitions landing -> registration when Register action is activated.
+  - activeScreen transitions registration -> landing when close action is activated.
   - transitionInProgress resolves to false after animation completes.
+  - closeActionAvailable MUST be true when activeScreen is registration.
 
 ## State Transitions
 - landing -> registration when Register action is activated.
+- registration -> landing when close action is activated.
 - registration fields untouched -> touched after first interaction.
 - invalid field -> valid when correction satisfies field rule.
 - canSubmit false -> true only when all required fields are valid.

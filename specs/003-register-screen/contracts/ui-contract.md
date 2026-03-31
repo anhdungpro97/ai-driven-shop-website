@@ -7,8 +7,10 @@ Frontend-only contract for transitioning from landing page to registration scree
 - Trigger control: existing Register action in landing/header area.
 - Behavior:
   - Activating Register transitions to dedicated registration screen.
+  - Activating registration close control transitions back to initial landing page.
   - Transition animation is smooth and completes without visual breakage.
   - Registration screen presents form hierarchy immediately after transition.
+  - After close transition completes, registration screen context is no longer visible.
 
 ## Form Content Contract
 - Required fields:
@@ -17,6 +19,7 @@ Frontend-only contract for transitioning from landing page to registration scree
   - Password input (masked by default)
   - Confirm Password input
 - Required controls:
+  - Registration close control on registration screen.
   - Optional password visibility toggle.
   - Primary Register button.
 - Primary action state:

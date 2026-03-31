@@ -304,6 +304,10 @@ button {
   animation: register-screen-enter 260ms ease-out;
 }
 
+.register-screen--exit {
+  animation: register-screen-exit 240ms ease-in forwards;
+}
+
 @keyframes register-screen-enter {
   from {
     opacity: 0;
@@ -312,6 +316,17 @@ button {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes register-screen-exit {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
   }
 }
 
@@ -327,6 +342,22 @@ button {
 .register-screen__header {
   display: grid;
   gap: var(--space-2);
+}
+
+.register-screen__close {
+  justify-self: end;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(14, 10, 8, 0.54);
+  color: #f4ecdf;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.register-screen__close:hover,
+.register-screen__close:focus-visible {
+  background: rgba(14, 10, 8, 0.72);
+  border-color: rgba(255, 255, 255, 0.55);
 }
 
 .register-screen__kicker {

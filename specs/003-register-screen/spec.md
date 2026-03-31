@@ -59,6 +59,22 @@ As a visitor, I want immediate inline feedback for input issues so I can fix err
 3. **Given** confirm password does not match password, **When** validation runs, **Then** an inline mismatch message is shown.
 4. **Given** invalid fields are corrected, **When** validation reruns, **Then** related inline error messages are removed.
 
+---
+
+### User Story 4 - Close Registration Screen (Priority: P2)
+
+As a visitor, I want to close the registration screen and return to the initial page so I can cancel registration without losing navigation control.
+
+**Why this priority**: A clear exit path reduces friction and prevents users from feeling trapped in the registration flow, but it depends on the registration screen existing first.
+
+**Independent Test**: Open the registration screen, use the close action, and verify the interface returns to the initial page with smooth transition behavior.
+
+**Acceptance Scenarios**:
+
+1. **Given** the visitor is on the registration screen, **When** they activate the close control, **Then** the interface transitions back to the initial page.
+2. **Given** the transition back is running, **When** it completes, **Then** the initial page is fully visible and interactive.
+3. **Given** the visitor returns to the initial page, **When** they inspect the registration form context, **Then** no registration overlay or panel remains visible.
+
 ### Edge Cases
 
 - If the visitor submits attempts with whitespace-only Full Name, the field remains invalid and shows a clear inline message.

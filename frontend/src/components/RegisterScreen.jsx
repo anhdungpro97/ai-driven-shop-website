@@ -16,7 +16,7 @@ const INITIAL_TOUCHED = {
   confirmPassword: false,
 }
 
-function RegisterScreen({ content }) {
+function RegisterScreen({ content, onCloseRequest, transitionState }) {
   const [values, setValues] = useState(INITIAL_VALUES)
   const [touched, setTouched] = useState(INITIAL_TOUCHED)
   const [submitAttempted, setSubmitAttempted] = useState(false)
@@ -55,10 +55,27 @@ function RegisterScreen({ content }) {
     return (touched[name] || submitAttempted) && errors[name]
   }
 
+  function handleClose() {
+    setValues(INITIAL_VALUES)
+    setTouched(INITIAL_TOUCHED)
+    setSubmitAttempted(false)
+    setPasswordVisible(false)
+    setConfirmPasswordVisible(false)
+    onCloseRequest()
+  }
+
+  const sectionClassName =
+    transitionState === 'exit'
+      ? 'register-screen register-screen--exit'
+      : 'register-screen register-screen--enter'
+
   return (
-    <section className="register-screen register-screen--enter" aria-label="Registration screen">
+    <section className={sectionClassName} aria-label="Registration screen">
       <div className="register-screen__card">
         <header className="register-screen__header">
+          <button type="button" className="register-screen__close" onClick={handleClose}>
+            {content.labels.closeRegister}
+          </button>
           <p className="register-screen__kicker">{content.kicker}</p>
           <h2>{content.title}</h2>
           <p>{content.subtitle}</p>
@@ -189,6 +206,7 @@ RegisterScreen.propTypes = {
       confirmPassword: PropTypes.string.isRequired,
       showPassword: PropTypes.string.isRequired,
       hidePassword: PropTypes.string.isRequired,
+      closeRegister: PropTypes.string.isRequired,
     }).isRequired,
     validationMessages: PropTypes.shape({
       fullNameRequired: PropTypes.string.isRequired,
@@ -198,6 +216,8 @@ RegisterScreen.propTypes = {
       confirmMismatch: PropTypes.string.isRequired,
     }).isRequired,
   }).isRequired,
+  onCloseRequest: PropTypes.func.isRequired,
+  transitionState: PropTypes.oneOf(['enter', 'exit']).isRequired,
 }
 
 export default RegisterScreen

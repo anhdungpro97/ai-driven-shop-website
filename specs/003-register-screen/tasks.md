@@ -87,14 +87,31 @@
 
 ---
 
-## Phase 6: Polish & Cross-Cutting Concerns
+## Phase 6: User Story 4 - Close Registration Screen (Priority: P2)
+
+**Goal**: Visitors can close the registration screen and return to the initial page with smooth transition behavior.
+
+**Independent Test**: Open the registration screen, activate close control, and verify return to the initial page with no registration panel remaining visible.
+
+- [X] T036 [US4] Add registration close control and click handling in frontend/src/components/RegisterScreen.jsx
+- [X] T037 [US4] Implement registration-to-landing close transition flow in frontend/src/App.jsx
+- [X] T038 [P] [US4] Add close-control placement and interaction styles in frontend/src/styles/landing.css
+- [X] T039 [P] [US4] Add close-flow state cleanup behavior in frontend/src/components/RegisterScreen.jsx
+- [X] T040 [US4] Record manual close-flow validation notes in frontend/tests/integration/us10-register-screen-close.md
+- [X] T041 [US4] Update integration validation index with US10 coverage in frontend/tests/integration/README.md
+
+**Checkpoint**: User Story 4 is independently functional and testable.
+
+---
+
+## Phase 7: Polish & Cross-Cutting Concerns
 
 **Purpose**: Final cross-story reconciliation and release validation.
 
 - [X] T030 [P] Reconcile quickstart validation wording with implemented behavior in specs/003-register-screen/quickstart.md
 - [X] T031 [P] Reconcile UI contract wording with implemented controls and states in specs/003-register-screen/contracts/ui-contract.md
 - [X] T032 [P] Reconcile data model fields/states with implementation in specs/003-register-screen/data-model.md
-- [X] T033 Update integration validation index with US7-US9 references in frontend/tests/integration/README.md
+- [X] T033 Update integration validation index with US7-US10 references in frontend/tests/integration/README.md
 - [X] T034 Capture final regression notes for feature 003 in frontend/tests/integration/final-validation.md
 - [X] T035 Capture lint/build performance evidence for feature 003 in frontend/tests/integration/lighthouse-report.md
 
@@ -109,25 +126,29 @@
 - **Phase 3 (US1)**: Depends on Foundational completion.
 - **Phase 4 (US2)**: Depends on US1 registration screen availability.
 - **Phase 5 (US3)**: Depends on US2 form-state and validation baseline.
-- **Phase 6 (Polish)**: Depends on completion of all user stories.
+- **Phase 6 (US4)**: Depends on US1 registration screen availability.
+- **Phase 7 (Polish)**: Depends on completion of all user stories.
 
 ### User Story Dependencies
 
 - **US1 (P1)**: Starts after Foundational; no dependencies on other user stories.
 - **US2 (P1)**: Depends on US1 registration screen context.
 - **US3 (P2)**: Depends on US2 input and form-validity behavior.
+- **US4 (P2)**: Depends on US1 registration screen availability and transition framework.
 
 ### User Story Completion Order
 
 1. **US1 (P1)**
 2. **US2 (P1)**
 3. **US3 (P2)**
+4. **US4 (P2)**
 
 ### User Story Dependency Graph
 
 - US1 -> US2
 - US2 -> US3
-- US1/US2/US3 -> Polish
+- US1 -> US4
+- US1/US2/US3/US4 -> Polish
 
 ---
 
@@ -145,6 +166,10 @@
 
 - T027 and T028 can run in parallel after T024-T026 starts.
 
+### User Story 4
+
+- T038 and T039 can run in parallel after T036-T037 starts.
+
 ---
 
 ## Implementation Strategy
@@ -161,4 +186,5 @@
 1. Deliver US1 transition and registration-screen hierarchy.
 2. Deliver US2 valid-form completion and button enablement.
 3. Deliver US3 inline validation guidance and accessibility behavior.
-4. Complete Polish phase and final validation evidence.
+4. Deliver US4 close-screen return behavior.
+5. Complete Polish phase and final validation evidence.

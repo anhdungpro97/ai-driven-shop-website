@@ -1,23 +1,23 @@
 # Implementation Plan: Register Screen Flow
 
-**Branch**: `003-register-screen` | **Date**: 2026-03-30 | **Spec**: specs/003-register-screen/spec.md
+**Branch**: `003-register-screen` | **Date**: 2026-03-31 | **Spec**: `specs/003-register-screen/spec.md`
 **Input**: Feature specification from `specs/003-register-screen/spec.md`
 
 ## Summary
 
-Add a dedicated registration screen that opens from the existing Register action and provides a mobile-friendly, clearly structured form with inline validation for Full Name, Email, Password, and Confirm Password. The primary Register action remains disabled until all required fields are valid, with smooth screen transition behavior and accessible validation feedback.
+Implement a dedicated registration screen flow opened from the existing Register action, with a clearly structured and mobile-friendly form, inline validation for Full Name, Email, Password, and Confirm Password, disabled-until-valid Register action, password visibility toggles, smooth transition animation, and a close action that returns users to the initial page.
 
 ## Technical Context
 
 **Language/Version**: JavaScript (ES Modules), ReactJS, HTML, CSS  
-**Primary Dependencies**: react, react-dom, prop-types, vite  
+**Primary Dependencies**: react, react-dom, prop-types, vite, @vitejs/plugin-react  
 **Storage**: N/A (frontend-only interaction state)  
 **Testing**: npm run lint, npm run build, manual integration validation notes  
 **Target Platform**: Modern desktop and mobile web browsers  
 **Project Type**: Website frontend only  
-**Performance Goals**: registration screen transition and field-validation response perceived within <= 1 second for 95% of interactions  
-**Constraints**: no backend or database changes; preserve existing design language; maintain keyboard accessibility and readable contrast  
-**Scale/Scope**: single landing flow enhancement introducing one registration screen, one form flow, and field-level validation behavior
+**Performance Goals**: Transition and validation response are perceived within <= 1 second for 95% of interactions  
+**Constraints**: No backend or database changes; preserve existing design language; maintain keyboard accessibility and readable contrast; provide explicit close navigation from registration screen to landing screen  
+**Scale/Scope**: Single landing flow enhancement introducing one registration screen, one return-to-landing close action, one form flow, and field-level validation behavior
 
 ## Constitution Check
 
@@ -26,18 +26,18 @@ Add a dedicated registration screen that opens from the existing Register action
 ### Pre-Research Check
 
 - Quality Gate: PASS. Existing frontend lint/build workflow and component structure support incremental implementation.
-- UX Gate: PASS. User journeys and edge-case validation states are defined in spec.
-- Performance Gate: PASS. Transition and validation responsiveness budget is defined and testable.
-- Verification Gate: PASS. Each user story has independent test criteria and acceptance scenarios.
-- Operational Gate: PASS. Feature is frontend-only with low rollback risk; validation artifacts and notes provide traceability.
+- UX Gate: PASS. Stories define entry, completion, inline guidance, and close-screen exit path.
+- Performance Gate: PASS. Transition and validation responsiveness budget is measurable and testable.
+- Verification Gate: PASS. Each user story includes independent test criteria and acceptance scenarios.
+- Operational Gate: PASS. Change is frontend-only with low rollback risk and explicit manual validation steps.
 
 ### Post-Design Check
 
-- Quality Gate: PASS. Design artifacts map cleanly to current frontend component/content/style structure.
-- UX Gate: PASS. Data model and contract include hierarchy, inline messages, visibility toggle, and mobile behavior.
-- Performance Gate: PASS. Quickstart includes explicit checks for transition and validation responsiveness.
-- Verification Gate: PASS. Story-level validations remain independently executable and mapped to requirements.
-- Operational Gate: PASS. Risk and rollback remain low-impact through isolated UI changes and validation notes.
+- Quality Gate: PASS. Design artifacts map to existing frontend component/content/style structure without introducing unstable dependencies.
+- UX Gate: PASS. Data model and contract cover hierarchy, inline messages, visibility toggles, mobile behavior, and close navigation.
+- Performance Gate: PASS. Quickstart includes explicit checks for open/close transition responsiveness and inline validation timing.
+- Verification Gate: PASS. Story-level validations remain independently executable and mapped to requirements/edge cases.
+- Operational Gate: PASS. Risk remains isolated to UI flow state and can be mitigated by reverting targeted component changes.
 
 ## Project Structure
 
@@ -67,7 +67,7 @@ frontend/
     └── integration/
 ```
 
-**Structure Decision**: Keep work inside the existing `frontend` application, adding targeted updates for Register-trigger navigation, registration form UI state, validation behavior, and integration validation notes.
+**Structure Decision**: Keep work inside the existing `frontend` application, adding targeted updates for Register-trigger navigation, registration form UI state, close action behavior, validation behavior, and integration validation notes.
 
 ## Phase Outputs
 
