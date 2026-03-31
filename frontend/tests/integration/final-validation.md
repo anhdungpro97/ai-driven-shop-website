@@ -17,4 +17,12 @@
   - Header actions (Login/Register) are visible and keyboard focusable
   - Hero section displays image and fallback logic
   - Category controls (Coffee/Juice/Foods) and sections are visible and navigable
+  - Coffee control opens and closes full-screen options view from category navigation
+  - Coffee options rows display aligned name, image, price, and order button values
+  - Coffee view is keyboard operable (trigger focus + Escape close)
+  - Register action transitions to dedicated registration screen with smooth entrance animation
+  - Registration screen displays Full Name, Email, Password, and Confirm Password fields
+  - Register button remains disabled until all required fields are valid
+  - Inline errors appear and clear for invalid email, weak password (<8), and mismatched confirm password
+  - Password visibility toggles are keyboard reachable and preserve field values
   - Footer information remains readable at mobile and desktop sizes

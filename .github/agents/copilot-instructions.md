@@ -10,6 +10,8 @@ Auto-generated from all feature plans. Last updated: 2026-03-30
 - N/A (no backend and no database in scope) (001-coffee-landing-page)
 - [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION] + [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION] (task_1_customize_1)
 - [if applicable, e.g., PostgreSQL, CoreData, files or N/A] (task_1_customize_1)
+- JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react (002-coffee-options-list)
+- N/A (frontend-only interaction state) (003-register-screen)
 
 - JavaScript (ES2022), HTML5, CSS3 + ReactJS 18, React DOM 18, Vite (001-coffee-landing-page)
 
@@ -30,9 +32,9 @@ npm test; npm run lint
 JavaScript (ES2022), HTML5, CSS3: Follow standard conventions
 
 ## Recent Changes
-- task_1_customize_1: Added [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION] + [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]
-- task_1_customize_1: Added [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION] + [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]
-- 001-coffee-landing-page: Added JavaScript (ES Modules) with ReactJS, HTML, CSS + `react`, `react-dom`, `prop-types`, `vite`, `@vitejs/plugin-react`
+- 003-register-screen: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite
+- 002-coffee-options-list: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react
+- 002-coffee-options-list: Added JavaScript (ES Modules), ReactJS, HTML, CSS + react, react-dom, prop-types, vite, @vitejs/plugin-react
 
 
 <!-- MANUAL ADDITIONS START -->

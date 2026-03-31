@@ -18,6 +18,49 @@ export const categoryLinks = [
   { name: 'Foods', destination: '#foods', order: 3 },
 ]
 
+export const coffeeOptions = [
+  {
+    id: 'espresso',
+    name: 'Espresso',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Espresso coffee served in a small ceramic cup',
+    priceDisplay: '$3.00',
+    orderButtonLabel: 'Order',
+    order: 1,
+    available: true,
+  },
+  {
+    id: 'americano',
+    name: 'Americano',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Americano coffee in a clear glass mug',
+    priceDisplay: '$3.50',
+    orderButtonLabel: 'Order',
+    order: 2,
+    available: true,
+  },
+  {
+    id: 'latte',
+    name: 'Cafe Latte',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Cafe latte with milk foam art in a wide cup',
+    priceDisplay: '$4.75',
+    orderButtonLabel: 'Order',
+    order: 3,
+    available: true,
+  },
+  {
+    id: 'cappuccino',
+    name: 'Cappuccino',
+    imagePath: heroCoffeeShopImage,
+    imageAlt: 'Cappuccino topped with frothy milk',
+    priceDisplay: '$4.50',
+    orderButtonLabel: 'Order',
+    order: 4,
+    available: true,
+  },
+]
+
 export const landingPageContent = {
   id: 'coffee-landing-main',
   backgroundImagePath: '/background_image.png',
@@ -27,6 +70,35 @@ export const landingPageContent = {
   heroImagePath: heroCoffeeShopImage,
   heroImageAlt: 'Warm coffee shop interior with brewed coffee and pastries',
   categories: categoryLinks,
+  coffeeOptionsPanel: {
+    panelId: 'coffee-options-panel',
+    title: 'Available Coffee Options',
+    emptyMessage: 'No coffee options are available right now.',
+    fallbackPriceLabel: 'Price unavailable',
+    options: coffeeOptions,
+  },
+  registerScreen: {
+    kicker: 'Create Your Account',
+    title: 'Register',
+    subtitle: 'Fill in your details to continue with Morning Roast.',
+    primaryActionLabel: 'Register',
+    labels: {
+      fullName: 'Full Name',
+      email: 'Email',
+      password: 'Password',
+      confirmPassword: 'Confirm Password',
+      showPassword: 'Show',
+      hidePassword: 'Hide',
+      closeRegister: 'Back to Landing',
+    },
+    validationMessages: {
+      fullNameRequired: 'Full name is required.',
+      emailInvalid: 'Please enter a valid email address.',
+      passwordWeak: 'Password must be at least 8 characters.',
+      confirmRequired: 'Please confirm your password.',
+      confirmMismatch: 'Passwords do not match.',
+    },
+  },
   footerInfo: {
     shopName: 'Morning Roast Coffee House',
     addressLine: '123 Bean Street, Brewtown, CA 90210',
